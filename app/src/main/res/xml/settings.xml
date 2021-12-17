@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        android:icon="@drawable/ic_baseline_notifications_active_24"
+        android:key="notification_settings"
+        android:title="@string/notification_settings"
+        app:fragment="com.ulan.timetable.fragments.NotificationSettingsFragment" />
+
+    <Preference
+        android:icon="@drawable/ic_access_time_black_24dp"
+        android:key="time_settings"
+        android:summary="@string/time_settings_desc"
+        android:title="@string/time_settings" />
+
+    <SwitchPreferenceCompat
+        android:defaultValue="true"
+        android:icon="@drawable/ic_do_not_disturb_on_black_24dp"
+        android:key="automatic_do_not_disturb"
+        android:summary="@string/do_not_disturb_settings_desc"
+        android:title="@string/do_not_disturb_setting" />
+
+    <SwitchPreferenceCompat
+        android:defaultValue="false"
+        android:key="do_not_disturb_turn_off"
+        android:summary="@string/do_not_disturb_turn_off_desc"
+        android:title="@string/do_not_disturb_turn_off" />
+
+    <ListPreference
+        android:defaultValue="switch"
+        android:entries="@array/theme_array"
+        android:entryValues="@array/theme_array_values"
+        android:icon="@drawable/ic_palette_black_24dp"
+        android:key="theme"
+        android:title="@string/choose_theme_setting" />
+
+    <EditTextPreference
+        android:icon="@drawable/ic_open_in_browser_white_24dp"
+        android:key="schoolwebsite"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:summary="@string/change_school_website_setting_summary"
+        android:title="@string/change_school_website_setting" />
+
+    <SwitchPreferenceCompat
+        android:defaultValue="true"
+        android:icon="@drawable/ic_baseline_view_list_24"
+        android:key="is_preselection"
+        android:title="@string/show_preselection_list" />
+
+    <Preference
+        android:key="preselection_elements"
+        android:title="@string/set_preselection_elements" />
+
+    <Preference
+        android:key="cyanea"
+        android:title="Theming"
+        app:isPreferenceVisible="false" />
+</PreferenceScreen>

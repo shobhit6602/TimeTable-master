@@ -1,0 +1,22 @@
+variables:
+  GIT_DEPTH: 0
+
+stages:
+    - build
+
+build_badges:
+  stage: build
+  image: python:3.6.6
+  before_script:
+    - apt-get update -qy
+    - pip install anybadge
+    - chmod +x get-updated-badge-info.sh
+  script:
+    - echo "Some script to build your code"
+  after_script:
+    - ./get-updated-badge-info.sh
+  artifacts:
+    paths:
+        - badges.json
+        - badges
+    when: always
